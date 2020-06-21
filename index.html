@@ -1,0 +1,47 @@
+var express = require('express'),
+    index   = express(),
+	bodyParser = require('body-parser'),
+	gtts       = require('gtts');
+
+index.use(bodyParser.json());
+index.use(bodyParser.urlencoded({extended: true}));
+index.set('view engine', 'ejs');
+
+//Routes
+
+//landing page
+index.get('/', function(req,res){
+	res.render('landing');
+});
+
+//SAY-text to speech
+index.get('/textToSpeech', function(req,res){
+	res.render('textToSpeech.ejs');
+});
+
+//to download audio
+index.post('/PlayTextToSpeech', function(req,res){
+	 var text = req.body.text;
+	var requestType = req.body.value;
+	 var speech = new gtts(text, 'en');
+	
+	// var gtts = new gTTS('text to speak', 'en');
+	
+	   speech.save('lazynerd.mp3', function (err, result) {
+      if(err) { throw new Error(err) }
+        console.log('Success! Open file /tmp/hello.mp3 to hear result.');
+		res.download('lazynerd.mp3');
+	});	
+	
+	
+	
+}); 
+
+//to convert speech to text
+index.get('/speechToText', function(req, res){
+	res.render('speechToText');
+});
+
+//connect to server
+index.listen(process.env.PORT || 3000);
+	
