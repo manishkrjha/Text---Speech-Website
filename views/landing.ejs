@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lazy Nerd</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- ATTACH CSS HERE -->
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+		<style>
+		      
+			@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+/* @supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.625rem;
+    grid-template-areas: ". main main ." ". main main .";
+  } */
+  /* #container-scss {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+  } */
+/* } */
+
+.center{
+	display: flex;
+	height: 250px;
+	justify-content: center;
+	align-items: center;
+}
+
+.seperation{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.uigradient{
+    background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+/* GOOGLE FONTS */
+
+.BSfont{
+    font-family: 'Balsamiq Sans', cursive;
+    color: seashell;
+}
+
+.PTfont{
+    font-family: 'PT Sans', sans-serif;
+    color: seashell;
+}
+
+			
+		</style>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid uigradient">
+            <div class="container">
+              <h1 class="display-4 d-flex justify-content-center BSfont">Lazy Nerd</h1> 
+              <p class="lead d-flex justify-content-center PTfont">A place to aid your unnecessay chores :D</p>
+            </div>
+          </div>
+          
+          <div class="container container-fluid center">
+              <div class="row">
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <a href="/textToSpeech">  
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                          <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">&nbsp &nbsp Text to Speech</span>
+                      </button>
+                    </a>  
+                  </div>
+                  <div class="col-lg-2 col-md-5 col-sm-12 col-xs-12 d-flex justify-content-center seperation">
+                    <button class="learn-more"> 
+                        <span class="button-text"></span>
+                      </button>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 d-flex justify-content-center">
+                    <a href="/speechToText">
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                          <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">&nbsp &nbsp Speech to Text</span>
+                      </button>
+                    </a>  
+                </div>
+              </div>
+            </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
