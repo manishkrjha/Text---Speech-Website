@@ -1,6 +1,6 @@
 # lazy Nerd
 
-Click <a href="https://bit.ly/2ANgMix">here</a> for live testing.
+Click <a href="https://bit.ly/2ANgMix" target="_blank">here</a> for live testing.
   
 > This site provide option for converting text to speech and vice versa.
 
